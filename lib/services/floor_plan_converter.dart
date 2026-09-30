@@ -112,7 +112,10 @@ class FloorPlanConverter {
       );
       if (image == null) throw StateError('Could not render this PDF page.');
       await File(outputPath).writeAsBytes(image.bytes, flush: true);
-      return (image.width, image.height);
+      return  (
+        image.width ?? (page.width * scale).round(),
+  image.height ?? (page.height * scale).round(),
+      );
     } finally {
       await page.close();
       await document.close();
