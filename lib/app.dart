@@ -20,7 +20,7 @@ class SmartFloorPlanApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: colorScheme,
         scaffoldBackgroundColor: const Color(0xFF0B1117),
-        cardTheme: const CardTheme(
+        cardTheme: const CardThemeData(
           color: Color(0xFF121C25),
           elevation: 0,
           margin: EdgeInsets.zero,
